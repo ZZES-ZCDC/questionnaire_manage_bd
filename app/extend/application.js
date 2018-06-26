@@ -38,6 +38,7 @@ module.exports = {
       if(!token) {
         token = 'Bearer ' + this.generateJWT(user.id, user.username, user.username)
       }
+      ctx.cookies.set('token', token)
       return {
         token,
         roles: user.userRoles

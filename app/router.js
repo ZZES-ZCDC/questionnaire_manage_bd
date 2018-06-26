@@ -16,5 +16,7 @@ module.exports = app => {
   router.get('/question/page', app.jwt, controller.question.getAllDataByPage) // 获取所有问卷信息（分页）
 
   // 页面渲染
-  router.get('/', controller.user.loginPage)
+  router.get('/', controller.home.mainPage)
+  router.get('/admin', controller.user.loginPage)
+  router.get('/manage', controller.home.managePage)
 };

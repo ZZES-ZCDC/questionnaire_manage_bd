@@ -1,0 +1,204 @@
+{% extends 'root.nj' %}
+
+{% block body %}
+{# 头部 #}
+<header >
+  <div class="header-logo wrap">
+     <img src="/public/images/header.png" alt="头部logo">
+  </div>
+  <nav class="wrap">
+    <ul>
+      <li>首页</li>
+      <li>礼金\礼券</li>
+      <li>关于蟹太太</li>
+      <li>联系蟹太太</li>
+    </ul>
+  </nav>
+  {# 轮播图 #}
+  <div id="carousel-example-generic wrap" class="carousel slide" data-interval="5000" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img  src="/public/images/carousel.png" alt="轮播图">
+        <button class="buy-btn">立即购买</button>
+        <div class="carousel-caption">
+        </div>
+      </div>
+      <div class="item">
+        <img src="/public/images/carousel.png" alt="轮播图">
+        <button class="buy-btn">立即购买</button>
+        <div class="carousel-caption">
+        </div>
+      </div>
+    </div>
+  </div>
+  {# 相关文字 #}
+  <div class="description wrap">
+    <div class="line"></div>
+    <div class="content">
+      <p>
+        ·20盒以内9.8折 一盒起 ·  20-50盒 9.5折 · 50-200盒  9折·
+      </p>
+      <p>
+        ·200-300盒 8.8折  · 300-500盒 8.5折 ·  500盒以上 8折·
+      </p>
+    </div>
+    <div class="line"></div>
+  </div>
+</header>
+
+{# 舌尖上的美味 #}
+<section class="wrap">
+  <div class="food">
+    <img src="/public/images/foodtitle.png" alt="舌尖上的美味标题">
+  </div>
+  <div class="food-imgs">
+    <div class="row">
+      <div class="inline">
+        <img id="f1" src="/public/images/food1.png" alt="蟹图片1">
+          <div class="img-text">
+            <h3>个大腿长 颜值担当</h3>
+            <p>个大腿长，肉满膘肥，煮后蟹黄似金，蟹膏如玉</p>
+          </div>
+        </img>
+      </div>
+      <div class="inline ml">
+        <img id="f2" src="/public/images/food2.png" alt="蟹图片2">
+        <div class="img-text">
+          <h3>膏黄满溢 晶红油润</h3>
+          <p>母蟹蟹黄四溢，公蟹脂肥膏满，通体晶红油润，鲜
+美扑鼻食欲满满</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class=" inline">
+        <img id="f3" src="/public/images/food3.png" alt="蟹图片3">
+        <div class="img-text">
+          <h3>肉质细嫩 鲜香溢甜</h3>
+          <p>蟹肉微微带甜，鲜美无比，可谓鲜而不腥，肥而不
+腻</p>
+        </div>
+      </div>
+      <div class="inline ml">
+        <img id="f4" src="/public/images/food4.png" alt="蟹图片4">
+        <div class="img-text">
+          <h3>来自阳澄湖的美味</h3>
+          <p>阳澄湖孕育的优质大闸蟹,拥有青背、白肚、金爪、
+黄毛四大特征，肉质紧实鲜美</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# 四大承诺 #}
+<section class="promise">
+  <div class="wrap row">
+    <div class="col-md-12 title">四大承诺</div>
+    <div class="col-md-3 promise-img">
+      <img src="/public/images/promise1.png" alt="承诺">
+      <h3>高品位礼盒</h3>
+    </div>
+    <div class="col-md-3 promise-img">
+      <img src="/public/images/promise2.png" alt="承诺">
+      <h3>足斤足两</h3>
+    </div>
+    <div class="col-md-3 promise-img">
+      <img src="/public/images/promise3.png" alt="承诺">
+      <h3>品质好蟹</h3>
+    </div>
+    <div class="col-md-3 promise-img">
+      <img src="/public/images/promise4.png" alt="承诺">
+      <h3>及时兑付</h3>
+    </div>
+  </div>
+</section>
+
+{# 质检合格 #}
+<section class="wrap pass">
+  <div class="title">质检合格 安全品质</div>
+  <div class="pass-imgs">
+    <div class="pass-img">
+      <img src="/public/images/pass1.png" alt="质检合格">
+      <p>大闸蟹行业协会常务理事单位</p>
+    </div>
+    <div class="pass-img">
+      <img src="/public/images/pass2.png" alt="质检合格">
+      <p>商标注册 阳澄湖大闸蟹地理专用标志产品使用权 检验报告</p>
+    </div>
+  </div>
+</section>
+
+{# 高品位礼盒 #}
+<section class="wrap gift">
+  <div class="title">高品位礼盒</div>
+  <div class="title-desc">为品质、放心而生</div>
+  <div class="gift-img">
+    <img src="/public/images/gift.png" alt="高品质礼盒">
+  </div>
+  <div class="row gifts">
+    <div class="col-md-2">
+      <img src="/public/images/gift1.png" alt="礼盒">
+    </div>
+    <div class="col-md-2">
+      <img src="/public/images/gift2.png" alt="礼盒">
+    </div>
+    <div class="col-md-2">
+      <img src="/public/images/gift3.png" alt="礼盒">
+    </div>
+    <div class="col-md-2">
+      <img src="/public/images/gift4.png" alt="礼盒">
+    </div>
+    <div class="col-md-2">
+      <img src="/public/images/gift5.png" alt="礼盒">
+    </div>
+  </div>
+</section>
+
+{# 十年品质好蟹 #}
+<section class="wrap good">
+  <div class="title">十年培育品质好蟹</div>
+  <div class="title-desc">“江海21”</div>
+
+  <div class="row good-imgs">
+    <div class="col-md-6">
+      <img src="/public/images/good1.png" alt="蟹">
+    </div>
+    <div class="col-md-6">
+      <img src="/public/images/good2.png" alt="蟹">
+    </div>
+  </div>
+</section>
+
+{# 问卷 #}
+<section class=" question">
+  <div class="wrap">
+    <div class="title">联系我们</div>
+    <form id="js-form" class="row" onsubmit="return false">
+       <select id="js-method form-control" name="method" class="col-md-6" required>
+        <option value="">您想要那种购买方式？</option>
+        <option value="个人">个人</option>
+        <option value="团购">团购</option>
+       </select>
+       <select id="js-wish" name="wish" class="col-md-6" required>
+        <option value="">您是否有意向参加我司的免费品尝活动？</option>
+        <option value="true">是</option>
+        <option value="false">否</option>
+       </select>
+       <select id="js-before" name="before" class="col-md-6" required>
+        <option value="">您是否曾购买过蟹太太大闸蟹？</option>
+        <option value="true">是</option>
+        <option value="false">否</option>
+       </select>
+       <input type="number" id="js-phone" name="phone" class="col-md-6" placeholder="您的联系电话？" required>
+       <textarea class="col-md-12" name="content" id="js-content" placeholder="请填写您的留言内容！" required></textarea>
+       <button type="submit" id="js-push-btn" class="col-md-12">提交</button>
+    </form>
+  </div>
+</section>
+{% endblock %}
+
+{% block script %}
+<script src="/public/js/question.js"></script>
+{% endblock %}

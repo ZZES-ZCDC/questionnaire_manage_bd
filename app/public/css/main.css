@@ -1,0 +1,267 @@
+body {
+  max-width: 1920px;
+  min-width: 1150px;
+  margin: 0 auto;
+  font-family: STXingkai, STKaiti;
+}
+
+.wrap {
+  width: 1150px;
+  margin: 0 auto;
+}
+
+/* 导航 */
+header {
+  height: 100%;
+  background: linear-gradient(-45deg,#000, #312210, #000);
+}
+header .header-logo {
+  height: 70px;
+}
+header .header-logo img {
+  width: 555px;
+}
+nav ul{
+  text-align: center;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+  color: #fff;
+}
+
+nav ul li:not(:last-child) {
+  border-right: 1px solid #fff;
+}
+
+/* 轮播图 */
+header .carousel-inner .item img {
+  margin: 0 auto;
+  width: 60%;
+}
+header .carousel-inner .item .buy-btn {
+  position: absolute;
+  left: 400px;
+  top: 300px;
+  width: 140px;
+  height: 40px;
+  font-size: 22px;
+  border: 1px solid #c48235;
+  color: #c48235;
+  text-align: center;
+  background: rgba(255, 255, 255, 0);
+}
+header .description {
+  text-align: center;
+  padding: 0 60px;
+}
+header  .description .line {
+  width: 100%;
+  height: 4px;
+  background: #c48235;
+  border-radius: 50%;
+}
+header .description .content {
+  padding: 10px 0;
+}
+header .description .content p {
+  color: #c48235;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* 舌尖上的美味 */
+.food {
+  text-align: center;
+  padding: 20px;
+}
+
+.food img {
+  width: 312px;
+}
+
+.food-imgs {
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.food-imgs img  {
+  margin-bottom: 20px;
+  box-shadow: 10px 10px 10px #d4d4d4;
+  width: 352px;
+  position: relative;
+}
+
+.food-imgs .inline {
+  display: inline-block;
+  position: relative;
+}
+
+.food-imgs .ml {
+  margin-left: 20px;
+}
+
+.food-imgs .img-text {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  color: #fff;
+  height: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.473);
+  transition: all 0.3s ease;
+}
+
+.food-imgs .inline:hover .img-text {
+  height: 100px;
+  display: block;
+}
+
+/* 承诺 */
+.promise {
+  margin-top: 20px;
+  background: #281603;
+  height: 100%;
+  padding: 20px;
+}
+
+.promise .title {
+  text-align: center;
+  font-size: 38px;
+  color: #fff;
+  font-family: "微软雅黑";
+  margin-bottom: 20px;
+}
+.promise-img {
+  text-align: center;
+}
+.promise .promise-img h3 {
+  color: #fff;
+}
+
+/* 质检合格 */
+.pass {
+  padding: 20px;
+}
+.pass .title{
+  text-align: center;
+  font-size: 38px;
+  color: #000;
+  font-family: "微软雅黑";
+  margin-bottom: 60px;
+}
+.pass .pass-imgs {
+  margin: 20px 0;
+  text-align: center;
+}
+.pass .pass-imgs .pass-img {
+  display: inline-block;
+}
+
+.pass .pass-imgs .pass-img p {
+  font-size: 16px;
+  font-family: "微软雅黑";
+  font-weight: bold;
+}
+
+/* 高品质礼盒 */
+.gift {
+  padding: 60px 0;
+}
+.gift .title {
+  text-align: center;
+  font-size: 38px;
+  color: #000;
+  font-family: "微软雅黑";
+  margin-bottom: 20px;
+}
+
+.gift .title-desc {
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+  font-family: "微软雅黑";
+  margin-bottom: 50px;
+}
+
+.gift .gift-img {
+  text-align: center;
+}
+
+.gift .gift-img img {
+  width: 500px;
+}
+
+.gift .gifts {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.gift .gifts .col-md-2 {
+  width: 20%;
+}
+
+/* 十年品质好蟹 */
+.good .title {
+  text-align: center;
+  font-size: 38px;
+  color: #000;
+  font-family: "微软雅黑";
+  margin-bottom: 20px;
+}
+
+.good .title-desc {
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+  font-family: "微软雅黑";
+  margin-bottom: 50px;
+}
+
+.good .good-imgs img {
+  width: 550px;
+}
+
+/* 问卷 */
+.question {
+  background: #4a4e53;
+  padding: 50px;
+}
+.question .title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: normal;
+  color: #cccccc;
+  font-family: "微软雅黑";
+  margin-bottom: 20px;
+}
+
+.question select,
+.question input,
+.question textarea {
+  margin-bottom: 20px;
+  font-family: "微软雅黑";
+  height: 30px;
+}
+
+.question textarea {
+  height: 124px;
+}
+
+.question button {
+  color: #999999;
+  font-family: "微软雅黑";
+  border-color: #575b60;
+  outline: 0 !important;
+  font-size: 14px;
+  background: #575b60;
+  border: 1px solid;
+  border-radius: 0;
+  height: 36px;
+  line-height: 34px;
+  padding: 0 15px;
+}

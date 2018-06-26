@@ -15,20 +15,23 @@
   <link rel="stylesheet" href="/public/css/login.css">
 </head>
 <body>
-  <div class="logindiv">
-    <img class="logo " src="images/login/u27.png">
+  <form id="js-form" class="logindiv" onsubmit="return false;">
+    <img class="logo " src="/public/images/logo.png">
     <p>
       <span id="title">蟹太太管理后台</span>
     </p>
     <div>
-      <img class="smallimg" src="images/login/user.png" alt="">
-      <input type="text" placeholder="账号"  name="username" class="login-input input-admin">
+      <img class="smallimg" src="/public/images/user.png" alt="">
+      <input type="text" placeholder="账号"  name="username" class="login-input input-admin" required>
     </div>
     <div>
-      <img class="smallimg" src="images/login/pwd.png" alt="">
-      <input type="password" placeholder="密码"  class="login-input input-pwd">
+      <img class="smallimg" src="/public/images/pwd.png" alt="">
+      <input type="password" placeholder="密码" name="password" class="login-input input-pwd" required>
     </div>
-    <button type="button"  class="loginbtn">登录</button>
-  </div>
+    <button type="button" id="js-login-btn"  class="loginbtn">登录</button>
+  </form>
+  <script src="/public/js/jquery.min.js"></script>
+  <script src="/public/js/bootstrap.min.js"></script>
+  <script src="/public/js/login.js"></script>
 </body>
 </html>

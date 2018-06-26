@@ -1,0 +1,49 @@
+{% extends 'root.nj' %}
+{% block css %}
+<link rel="stylesheet" href="/public/css/manage.css">
+{% endblock %}
+
+{% block body %}
+<header >
+  <div class="header-logo wrap">
+     <img src="/public/images/header.png" alt="头部logo">
+  </div>
+</header>
+
+<div class=" wrap row main">
+  <aside class="col-md-4">
+    <div class="user"></div>
+    <ul>
+      <li>问卷信息管理</li>
+    </ul>
+  </aside>
+  <main class="col-md-8">
+    <table  class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>序号</th>
+                <th>购买方式</th>
+                <th>是否参加免费品尝</th>
+                <th>是否购买过蟹太太大闸蟹</th>
+                <th>手机号</th>
+                <th>意见</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in result %}
+            <tr>
+                <td><input type="checkbox"  name="selected"></td>
+                <td>{{item.id}}</td>
+                <td>{{item.method}}</td>
+                <td>{{item.wish}}</td>
+                <td>{{item.before}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.content}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+  </main>
+</div>
+{% endblock %}
