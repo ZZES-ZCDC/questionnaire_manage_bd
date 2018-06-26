@@ -1,0 +1,60 @@
+{
+  "name": "wb",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "egg": "^2.2.1",
+    "egg-jwt": "^3.0.0",
+    "egg-router-plus": "^1.2.1",
+    "egg-scripts": "^2.5.0",
+    "egg-sequelize": "^3.1.4",
+    "egg-validate": "^1.0.0",
+    "mysql2": "^1.5.3",
+    "validate": "^4.4.1"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "egg-bin": "^4.3.5",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.14.0",
+    "eslint": "^4.11.0",
+    "eslint-config-egg": "^6.0.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "migrate:new": "egg-sequelize migration:create",
+    "migrate:up": "egg-sequelize db:migrate",
+    "migrate:down": "egg-sequelize db:migrate:undo",
+    "start": "egg-scripts start --daemon --title=egg-server-wb",
+    "stop": "egg-scripts stop --title=egg-server-wb",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
