@@ -25,11 +25,12 @@ class UserController extends Controller {
    */
   async register() {
     const { ctx, app } = this
-    const { user } = ctx.request.body
+    const user  = ctx.request.body
     ctx.validate({
       username: { type: 'string', required: true },
       password: { type: 'string', required: true}
     }, user)
+    console.log(user)
     const {username} = user
     const password = ctx.helper.bhash(user.password)
     const newUser = {
