@@ -54,7 +54,6 @@ module.exports = {
    */
   fail: ({ctx, code=500, res=null, msg='fail'}) => {
     ctx.status = 200
-    console.log(ctx.helper.errorCode)
     ctx.body = {
       code: code,
       message: ctx.helper.errorCode[code],

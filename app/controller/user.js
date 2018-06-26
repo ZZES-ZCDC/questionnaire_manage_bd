@@ -28,9 +28,8 @@ class UserController extends Controller {
     const user  = ctx.request.body
     ctx.validate({
       username: { type: 'string', required: true },
-      password: { type: 'string', required: true}
+      password: { type: 'string', required: true }
     }, user)
-    console.log(user)
     const {username} = user
     const password = ctx.helper.bhash(user.password)
     const newUser = {
@@ -39,8 +38,12 @@ class UserController extends Controller {
     }
     // 创建用户
     const result = await ctx.service.user.create(newUser)
-    ctx.status = 201
     ctx.helper.success({ctx, res:app.getUserJson(result, ctx, 0)})
+  }
+
+  async loginPage() {
+    const { ctx } = this
+    await ctx.render('login')
   }
 }
 

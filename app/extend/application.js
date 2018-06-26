@@ -36,7 +36,7 @@ module.exports = {
     let token = config.jwt.getToken(ctx)
     if(check === 1){
       if(!token) {
-        token = 'Bearer ' + this.generateJWT(user.id, user.username, user.username, user.userRoles[0].role.name||'')
+        token = 'Bearer ' + this.generateJWT(user.id, user.username, user.username)
       }
       return {
         token,
