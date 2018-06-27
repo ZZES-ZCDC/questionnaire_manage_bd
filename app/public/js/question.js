@@ -37,4 +37,10 @@ $(function(){
     }
     
   })
+
+  $("#js-video-small").click(function() {
+    $("#js-video").removeClass("header-video")
+    $("#js-video").addClass("header-video-small")
+    $("#js-video-small").hide()
+  })
 })

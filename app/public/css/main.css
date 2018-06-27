@@ -9,7 +9,9 @@ body {
   width: 1150px;
   margin: 0 auto;
 }
-a,a:hover  {
+a,
+a:link,
+a:hover  {
   text-decoration-line: none;
   color: #fff;
 }
@@ -57,6 +59,30 @@ header .carousel-inner .item .buy-btn {
   color: #c48235;
   text-align: center;
   background: rgba(255, 255, 255, 0);
+}
+
+header .header-video {
+  position: absolute;
+  top: 15%;
+  left: 22%;
+  width: 800px;
+  height: 500px;
+}
+
+header .header-video-small {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  width: 300px;
+  height: 200px;
+}
+header .clickToSmall {
+  position: absolute;
+  top: 12%;
+  color: #fff;
+  right: 19%;
+  background: #00000047;
+  cursor: pointer;
 }
 header .description {
   text-align: center;

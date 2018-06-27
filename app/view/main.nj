@@ -32,6 +32,15 @@
       </div>
     </div>
   </div>
+  <embed id="js-video" class="header-video" 
+    src='http://player.youku.com/player.php/sid/XMzY2MDI5NDM0MA==/v.swf' 
+    allowFullScreen='true' 
+    quality='high' 
+    align='middle' 
+    allowScriptAccess='always' 
+    type='application/x-shockwave-flash'>
+    <span class="clickToSmall" id="js-video-small">点击缩小</span>
+  </embed>
   {# 相关文字 #}
   <div class="description wrap">
     <div class="line"></div>
