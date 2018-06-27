@@ -9,8 +9,10 @@
   <link rel="stylesheet" href="/public/css/font-awesome.min.css">
   <link rel="stylesheet" href="/public/css/normalize.css">
   <link rel="stylesheet" href="/public/css/main.css">
+
   {% block css %}
   {% endblock %}
+
   <!-- [if lt IE9]>
     <script src="/public/js/html5shiv.min.js"></script>
     <script src="/public/js/respond.min.js"></script>

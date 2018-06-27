@@ -17,8 +17,9 @@ module.exports = app => {
 
   // 页面渲染
   router.get('/', controller.home.mainPage)
+  router.get('/gift', controller.home.giftPage)
+  router.get('/about', controller.home.aboutPage)
   router.get('/admin', controller.user.loginPage)
-  // router.get('/manage', controller.home.managePage)
   router.get('/back', controller.home.manage)
   router.get('/question', controller.question.getAllData) // 渲染页面获取所有问卷信息（分页）
 };

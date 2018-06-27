@@ -12,6 +12,22 @@ class HomeController extends Controller {
   }
 
   /**
+   * 礼品礼盒页面
+   */
+  async giftPage() {
+    const {ctx} = this
+    await ctx.render('gift')
+  }
+
+  /**
+   * 关于页面
+   */
+  async aboutPage() {
+    const {ctx} = this
+    await ctx.render('about')
+  }
+  
+  /**
    * 管理界面
    */
   async managePage() {

@@ -1,0 +1,66 @@
+{% extends 'root.nj' %}
+{% block css %}
+<link rel="stylesheet" href="/public/css/about.css">
+{% endblock %}
+
+{% block body %}
+<header >
+  <div class="header-logo wrap">
+    <img src="/public/images/header.png" alt="头部logo">
+  </div>
+  <div class="about-header">
+    <img src="/public/images/gift_header.png" alt="关于">
+  </div>
+</header>
+
+{# 我们是谁 #}
+<section class="wrap">
+  <div class="about-title">
+    <img src="/public/images/about_title.png" alt="我们是谁">
+  </div>
+  <div class="about-content">
+    <p>我们诞生在江南水乡和阳澄湖大闸蟹的故乡——苏州，是一家“技术驱动移动互联
+网生活”的科技型企业，拥有经验丰富的运营团队。</p>
+    <p>2018年我们创建了大闸蟹明星品牌——蟹太太，只为树立行业标杆，加强行业品
+牌性，打造行业公信力，重塑整个生鲜产业的大生态。</p>
+  </div>
+</section>
+
+<section class="about-main1">
+  <div class="wrap about-content row">
+    <div class="col-md-6">
+      <h3>一、与黄晓明签约合作</h3>
+      <p>2018年，蟹太太力邀黄晓明成为品牌形象代言人。
+据悉，这是目前生鲜行业首个邀请一线明星成为代
+言人的品牌，将为生鲜行业注入了新鲜的资源与血
+液。</p>
+    </div>
+    <div class="col-md-6">
+      <img src="/public/images/about1.png" alt="关于">
+    </div>
+  </div>
+</section>
+
+<section class="about-main2">
+  <div class="wrap about-content">
+    <div class="col-md-6">
+      <img src="/public/images/about2.png" alt="关于">
+    </div>
+    <div class="col-md-6">
+      <h3>二、与上海海洋大学战略合作</h3>
+      <p>2018年，蟹太太与上海海洋大学达成了战略合作，
+将一同组成研发团队，对蟹苗和养殖水域等进行研
+究。
+上海海洋大学创建于1912年，前身为江苏省立水产
+学校，2017年入选国家“双一流”建设高校。</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="wrap">
+  <div class="contact">
+    <img src="/public/images/contact.png" alt="联系我们">
+  </div>
+</section>
+{% endblock %}

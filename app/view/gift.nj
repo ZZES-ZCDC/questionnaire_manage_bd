@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>蟹太太</title>
+  <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/public/css/normalize.css">
+  <link rel="stylesheet" href="/public/css/main.css">
+  <link rel="stylesheet" href="/public/css/gift.css">
+  <link rel="stylesheet" href="/public/imgbox/imgbox.css">
+</head>
+<body>
+  <header >
+    <div class="header-logo wrap">
+      <img src="/public/images/header.png" alt="头部logo">
+    </div>
+    <div class="gift-header">
+      <img src="/public/images/gift_header.png" alt="礼品">
+    </div>
+  </header>
+
+  {# 礼品 #}
+  <section class="wrap">
+    <div class="gift-title">
+      <img src="/public/images/gift_title.png" alt="礼物列表标题">
+    </div>
+
+    <div class="gift-imgs row">
+      <div class="col-md-2">
+        <a id="gift-img1" href="/public/images/c1.png">
+          <img src="/public/images/c1.png" alt="">
+        </a>
+      </div>
+      <div class="col-md-2">
+        <a id="gift-img2" href="/public/images/c2.png"><img src="/public/images/c2.png" alt=""></a>
+      </div>
+      <div class="col-md-2">
+        <a id="gift-img3" href="/public/images/c3.png"><img src="/public/images/c3.png" alt=""></a>
+      </div>
+      <div class="col-md-2">
+        <a id="gift-img4" href="/public/images/c4.png"><img src="/public/images/c4.png" alt=""></a>
+      </div>
+      <div class="col-md-2">
+        <a id="gift-img5" href="/public/images/c5.png"><img src="/public/images/c5.png" alt=""></a>
+      </div>
+    </div>
+    <div class="gift-imgs row">
+      <div class="col-md-2">
+        <a id="gift-img6" href="/public/images/c6.png"><img src="/public/images/c6.png" alt=""></a>
+      </div>
+      <div class="col-md-2">
+        <a id="gift-img7" href="/public/images/c7.png"><img src="/public/images/c7.png" alt=""></a>
+      </div>
+      <div class="col-md-2">
+        <a id="gift-img8" href="/public/images/c8.png"><img src="/public/images/c8.png" alt=""></a>
+      </div>
+      <div class="col-md-2">
+        <a id="gift-img9" href="/public/images/c9.png"><img src="/public/images/c9.png" alt=""></a>
+      </div>
+      <div class="col-md-2">
+        <a id="gift-img10" href="/public/images/c10.png"><img src="/public/images/c10.png" alt=""></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="contact">
+      <img src="/public/images/contact.png" alt="联系我们">
+    </div>
+  </section>
+
+
+
+  <script src="/public/imgbox/jquery.min.js"></script>
+  <script src="/public/imgbox/jquery.imgbox.pack.js"></script>
+  <script>
+      $(document).ready(function(){
+        $("#gift-img1").imgbox({
+          'alignment':'center',
+          'zoomOpacity': true,
+          'speedIn':0,
+          'speedOut': 0,
+          'autoScale': true,
+        });
+        $("#gift-img2").imgbox({
+          'alignment':'center',
+          'zoomOpacity': true,
+          'speedIn':0,
+          'speedOut': 0,
+          'autoScale': true,
+        });
+        $("#gift-img3").imgbox({
+          'alignment':'center',
+          'zoomOpacity': true,
+          'speedIn':0,
+          'speedOut': 0,
+          'autoScale': true,
+        });
+        $("#gift-img4").imgbox({
+          'alignment':'center',
+          'zoomOpacity': true,
+          'speedIn':0,
+          'speedOut': 0,
+          'autoScale': true,
+        });
+        $("#gift-img5").imgbox({
+          'alignment':'center',
+          'zoomOpacity': true,
+          'speedIn':0,
+          'speedOut': 0,
+          'autoScale': true,
+        });
+        $("#gift-img6").imgbox({
+          'alignment':'center',
+          'zoomOpacity': true,
+          'speedIn':0,
+          'speedOut': 0,
+          'autoScale': true,
+        });
+        $("#gift-img7").imgbox({
+          'alignment':'center',
+          'zoomOpacity': true,
+          'speedIn':0,
+          'speedOut': 0,
+          'autoScale': true,
+        });
+        $("#gift-img8").imgbox({
+          'alignment':'center',
+          'zoomOpacity': true,
+          'speedIn':0,
+          'speedOut': 0,
+          'autoScale': true,
+        });
+        $("#gift-img9").imgbox({
+          'alignment':'center',
+          'zoomOpacity': true,
+          'speedIn':0,
+          'speedOut': 0,
+          'autoScale': true,
+        });
+        $("#gift-img10").imgbox({
+          'alignment':'center',
+          'zoomOpacity': true,
+          'speedIn':0,
+          'speedOut': 0,
+          'autoScale': true,
+        });
+      });
+  </script>
+</body>
+</html>
