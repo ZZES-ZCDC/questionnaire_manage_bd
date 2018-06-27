@@ -36,6 +36,15 @@ class QuestionService extends Service {
     const result = await ctx.model.Question.findAll()
     return result
   }
+
+  /**
+   * 获取所有数据总数
+   */
+  async getAllDataNum() {
+    const { ctx } = this
+    const result = await ctx.model.Question.count()
+    return result
+  }
 }
 
 module.exports = QuestionService;

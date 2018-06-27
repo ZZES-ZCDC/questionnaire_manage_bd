@@ -12,11 +12,13 @@ module.exports = app => {
 
   // 问卷相关
   router.post('/question', controller.question.addData)    // 录入问卷信息
-  router.get('/question', app.jwt, controller.question.getAllData)  // 获取所有问卷信息
+  // router.get('/question', app.jwt, controller.question.getAllData)  // 获取所有问卷信息
   router.get('/question/page', app.jwt, controller.question.getAllDataByPage) // 获取所有问卷信息（分页）
 
   // 页面渲染
   router.get('/', controller.home.mainPage)
   router.get('/admin', controller.user.loginPage)
-  router.get('/manage', controller.home.managePage)
+  // router.get('/manage', controller.home.managePage)
+  router.get('/back', controller.home.manage)
+  router.get('/question', controller.question.getAllData) // 渲染页面获取所有问卷信息（分页）
 };

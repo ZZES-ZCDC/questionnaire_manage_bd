@@ -24,15 +24,32 @@ class QuestionController extends Controller {
   }
 
   /**
-   * 获取所有问卷数据(无分页)
+   * 渲染获取所有问卷数据
    */
   async getAllData() {
     const {ctx} = this
-    const result = await ctx.service.question.getAllData()
-    ctx.helper.success({
-      ctx,
-      res: result
-    })
+    const {page, limit} = ctx.query
+    let token = ctx.cookies.get('token')
+    if(token){
+      const result = await ctx.curl(`http://localhost:7001/question/page?page=${page}&limit=${limit}`, {
+        // 必须指定 method
+        method: 'GET',
+        // 通过 contentType 告诉 HttpClient 以 JSON 格式发送
+        contentType: 'json',
+        // 明确告诉 HttpClient 以 JSON 格式处理返回的响应 body
+        dataType: 'json',
+        headers: {
+          'Authorization': token
+        }
+      })
+      const count = await ctx.service.question.getAllDataNum()
+      ctx.body = {
+        code: 0,
+        count:count,
+        msg:"",
+        data:result.data.data
+      }
+    }
   }
 
   /**
@@ -40,7 +57,8 @@ class QuestionController extends Controller {
    */
   async getAllDataByPage() {
     const {ctx} = this
-    const {offset, limit} = ctx.query
+    const {page, limit} = ctx.query
+    let offset = page
     const result = await ctx.service.question.getAllDataByPage(offset, limit)
     ctx.helper.success({
       ctx,

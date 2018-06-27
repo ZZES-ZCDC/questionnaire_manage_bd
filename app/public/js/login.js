@@ -21,7 +21,7 @@ $(function(){
         data: JSON.stringify(obj),
         success: function(data) {
           if(data.code === 200 ) {
-            location.href="/manage"
+            location.href="/back"
           } else {
             alert('提交失败')
           }

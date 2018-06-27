@@ -17,7 +17,6 @@ class HomeController extends Controller {
   async managePage() {
     const {ctx} = this
     let token = ctx.cookies.get('token')
-    console.log(token)
     if(token){
       const result = await ctx.curl('http://localhost:7001/question', {
         // 必须指定 method
@@ -35,7 +34,19 @@ class HomeController extends Controller {
     } else {
       await ctx.render('login')
     }
-    
+  }
+
+  /**
+   * 管理界面layui
+   */
+  async manage() {
+    const {ctx} = this
+    let token = ctx.cookies.get('token')
+    if(token){
+      await ctx.render('back')
+    } else {
+      await ctx.render('login')
+    }
   }
 }
 
