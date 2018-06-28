@@ -61,10 +61,29 @@ header .carousel-inner .item .buy-btn {
   background: rgba(255, 255, 255, 0);
 }
 
+.buy-contact {
+  position: fixed;
+  left: 45%;
+  top: 86%;
+  z-index: 2000;
+  display: inline-block;
+  height: 32px;
+  width: 200px;
+  border: 1px solid #c48235;
+  line-height: 32px;
+  font-size: 22px;
+  color: #000;
+  background: #c48235;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 视频部分 */
 header .header-video {
-  position: absolute;
+  position: fixed;
   top: 15%;
   left: 22%;
+  z-index: 1000;
   width: 800px;
   height: 500px;
 }
@@ -75,11 +94,13 @@ header .header-video-small {
   top: 50%;
   width: 300px;
   height: 200px;
+  z-index: 2000;
 }
 header .clickToSmall {
-  position: absolute;
-  top: 12%;
+  position: fixed;
+  top: 15%;
   color: #fff;
+  z-index: 1000;
   right: 19%;
   background: #00000047;
   cursor: pointer;
@@ -262,6 +283,7 @@ header .description .content p {
   background: #4a4e53;
   padding: 50px;
   margin-top: 40px;
+  z-index: 5000;
 }
 .question .title {
   text-align: center;

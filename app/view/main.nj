@@ -1,6 +1,7 @@
 {% extends 'root.nj' %}
 
 {% block body %}
+<a class="buy-contact" href="#contact">订购咨询</a>
 {# 头部 #}
 <header >
   <div class="header-logo wrap">
@@ -21,26 +22,19 @@
       <div class="item active">
         <img  src="/public/images/carousel.png" alt="轮播图">
         <button class="buy-btn" onclick="location.href='/gift'">立即购买</button>
-        <div class="carousel-caption">
-        </div>
       </div>
       <div class="item">
         <img src="/public/images/carousel.png" alt="轮播图">
         <button class="buy-btn" onclick="location.href='/gift'">立即购买</button>
-        <div class="carousel-caption">
-        </div>
       </div>
     </div>
   </div>
-  <embed id="js-video" class="header-video" 
-    src='http://player.youku.com/player.php/sid/XMzY2MDI5NDM0MA==/v.swf' 
-    allowFullScreen='true' 
-    quality='high' 
-    align='middle' 
-    allowScriptAccess='always' 
-    type='application/x-shockwave-flash'>
-    <span class="clickToSmall" id="js-video-small">点击缩小</span>
-  </embed>
+  <video id="js-video" class="header-video"  
+      src="/public/video/xtt.mp4" controls="controls">
+    您的浏览器不支持 video 标签。
+    
+  </video>
+  <span class="clickToSmall" id="js-video-small">点击缩小</span>
   {# 相关文字 #}
   <div class="description wrap">
     <div class="line"></div>
