@@ -52,6 +52,15 @@ header {
   width: 340px;
 }
 
+.about-main3 {
+  margin-top: 0;
+}
+
+.about-main3 .list p {
+  text-align: left;
+  text-indent: 0;
+}
+
 .contact {
   text-align: center;
 }

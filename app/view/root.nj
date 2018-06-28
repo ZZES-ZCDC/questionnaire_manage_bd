@@ -23,6 +23,15 @@
   {% endblock %}
   <script src="/public/js/jquery.min.js"></script>
   <script src="/public/js/bootstrap.min.js"></script>
+  <script src="/public/js/question.js"></script>
+  <script>
+    $('a').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $.attr(this, 'href') ).offset().top
+      }, 500);
+      return false;
+    });
+  </script>
   {% block script %}
   {% endblock %}
 </body>

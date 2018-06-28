@@ -1,153 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>蟹太太</title>
-  <link rel="stylesheet" href="/public/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/public/css/normalize.css">
-  <link rel="stylesheet" href="/public/css/main.css">
-  <link rel="stylesheet" href="/public/css/gift.css">
-  <link rel="stylesheet" href="/public/imgbox/imgbox.css">
-</head>
-<body>
-  <header >
-    <div class="header-logo wrap">
-      <img src="/public/images/header.png" alt="头部logo">
-    </div>
-    <div class="gift-header">
-      <img src="/public/images/gift_header.png" alt="礼品">
-    </div>
-  </header>
+{% extends 'root.nj' %}
 
-  {# 礼品 #}
-  <section class="wrap">
-    <div class="gift-title">
-      <img src="/public/images/gift_title.png" alt="礼物列表标题">
+{% block css%}
+<link rel="stylesheet" href="/public/css/gift.css">
+{% endblock%}
+
+{% block body %}
+ 
+<header >
+  <div class="header-logo wrap">
+    <img src="/public/images/header.png" alt="头部logo">
+  </div>
+  <div class="gift-header">
+    <nav class="wrap">
+      <ul>
+        <li><a href="/">首页</a></li>
+        <li><a href="/gift">礼金\礼券</a></li>
+        <li><a href="/about">关于蟹太太</a></li>
+        <li><a href="#contact">联系蟹太太</a></li>
+      </ul>
+    </nav>
+    <img src="/public/images/gift_header.png" alt="礼品">
+  </div>
+</header>
+
+{# 礼品 #}
+<section class="wrap">
+  <div class="gift-title">
+    <img src="/public/images/gift_title.png" alt="礼物列表标题">
+  </div>
+
+  <div class="gift-imgs row">
+    <div class="col-md-2">
+      <a id="gift-img1" href="#contact">
+        <img src="/public/images/c1.png" alt="">
+      </a>
     </div>
-
-    <div class="gift-imgs row">
-      <div class="col-md-2">
-        <a id="gift-img1" href="/public/images/c1.png">
-          <img src="/public/images/c1.png" alt="">
-        </a>
-      </div>
-      <div class="col-md-2">
-        <a id="gift-img2" href="/public/images/c2.png"><img src="/public/images/c2.png" alt=""></a>
-      </div>
-      <div class="col-md-2">
-        <a id="gift-img3" href="/public/images/c3.png"><img src="/public/images/c3.png" alt=""></a>
-      </div>
-      <div class="col-md-2">
-        <a id="gift-img4" href="/public/images/c4.png"><img src="/public/images/c4.png" alt=""></a>
-      </div>
-      <div class="col-md-2">
-        <a id="gift-img5" href="/public/images/c5.png"><img src="/public/images/c5.png" alt=""></a>
-      </div>
+    <div class="col-md-2">
+      <a id="gift-img2" href="#contact"><img src="/public/images/c2.png" alt=""></a>
     </div>
-    <div class="gift-imgs row">
-      <div class="col-md-2">
-        <a id="gift-img6" href="/public/images/c6.png"><img src="/public/images/c6.png" alt=""></a>
-      </div>
-      <div class="col-md-2">
-        <a id="gift-img7" href="/public/images/c7.png"><img src="/public/images/c7.png" alt=""></a>
-      </div>
-      <div class="col-md-2">
-        <a id="gift-img8" href="/public/images/c8.png"><img src="/public/images/c8.png" alt=""></a>
-      </div>
-      <div class="col-md-2">
-        <a id="gift-img9" href="/public/images/c9.png"><img src="/public/images/c9.png" alt=""></a>
-      </div>
-      <div class="col-md-2">
-        <a id="gift-img10" href="/public/images/c10.png"><img src="/public/images/c10.png" alt=""></a>
-      </div>
+    <div class="col-md-2">
+      <a id="gift-img3" href="#contact"><img src="/public/images/c3.png" alt=""></a>
     </div>
-  </section>
-
-  <section class="wrap">
-    <div class="contact">
-      <img src="/public/images/contact.png" alt="联系我们">
+    <div class="col-md-2">
+      <a id="gift-img4" href="#contact"><img src="/public/images/c4.png" alt=""></a>
     </div>
-  </section>
+    <div class="col-md-2">
+      <a id="gift-img5" href="#contact"><img src="/public/images/c5.png" alt=""></a>
+    </div>
+  </div>
+  <div class="gift-imgs row">
+    <div class="col-md-2">
+      <a id="gift-img6" href="#contact"><img src="/public/images/c6.png" alt=""></a>
+    </div>
+    <div class="col-md-2">
+      <a id="gift-img7" href="#contact"><img src="/public/images/c7.png" alt=""></a>
+    </div>
+    <div class="col-md-2">
+      <a id="gift-img8" href="#contact"><img src="/public/images/c8.png" alt=""></a>
+    </div>
+    <div class="col-md-2">
+      <a id="gift-img9" href="#contact"><img src="/public/images/c9.png" alt=""></a>
+    </div>
+    <div class="col-md-2">
+      <a id="gift-img10" href="#contact"><img src="/public/images/c10.png" alt=""></a>
+    </div>
+  </div>
+</section>
 
-
-
-  <script src="/public/imgbox/jquery.min.js"></script>
-  <script src="/public/imgbox/jquery.imgbox.pack.js"></script>
-  <script>
-      $(document).ready(function(){
-        $("#gift-img1").imgbox({
-          'alignment':'center',
-          'zoomOpacity': true,
-          'speedIn':0,
-          'speedOut': 0,
-          'autoScale': true,
-        });
-        $("#gift-img2").imgbox({
-          'alignment':'center',
-          'zoomOpacity': true,
-          'speedIn':0,
-          'speedOut': 0,
-          'autoScale': true,
-        });
-        $("#gift-img3").imgbox({
-          'alignment':'center',
-          'zoomOpacity': true,
-          'speedIn':0,
-          'speedOut': 0,
-          'autoScale': true,
-        });
-        $("#gift-img4").imgbox({
-          'alignment':'center',
-          'zoomOpacity': true,
-          'speedIn':0,
-          'speedOut': 0,
-          'autoScale': true,
-        });
-        $("#gift-img5").imgbox({
-          'alignment':'center',
-          'zoomOpacity': true,
-          'speedIn':0,
-          'speedOut': 0,
-          'autoScale': true,
-        });
-        $("#gift-img6").imgbox({
-          'alignment':'center',
-          'zoomOpacity': true,
-          'speedIn':0,
-          'speedOut': 0,
-          'autoScale': true,
-        });
-        $("#gift-img7").imgbox({
-          'alignment':'center',
-          'zoomOpacity': true,
-          'speedIn':0,
-          'speedOut': 0,
-          'autoScale': true,
-        });
-        $("#gift-img8").imgbox({
-          'alignment':'center',
-          'zoomOpacity': true,
-          'speedIn':0,
-          'speedOut': 0,
-          'autoScale': true,
-        });
-        $("#gift-img9").imgbox({
-          'alignment':'center',
-          'zoomOpacity': true,
-          'speedIn':0,
-          'speedOut': 0,
-          'autoScale': true,
-        });
-        $("#gift-img10").imgbox({
-          'alignment':'center',
-          'zoomOpacity': true,
-          'speedIn':0,
-          'speedOut': 0,
-          'autoScale': true,
-        });
-      });
-  </script>
-</body>
-</html>
+<section>
+  <div class="contact" id="contact">
+    <img src="/public/images/contact.png" alt="联系我们">
+  </div>
+  <div class="question">
+    <form id="js-form" class="row" onsubmit="return false">
+      <select id="js-method form-control" name="method" class="col-md-6" required>
+        <option value="">您想要那种购买方式？</option>
+        <option value="个人">个人</option>
+        <option value="团购">团购</option>
+      </select>
+      <select id="js-wish" name="wish" class="col-md-6" required>
+        <option value="">您是否有意向参加我司的免费品尝活动？</option>
+        <option value="true">是</option>
+        <option value="false">否</option>
+      </select>
+      <select id="js-before" name="before" class="col-md-6" required>
+        <option value="">您是否曾购买过蟹太太大闸蟹？</option>
+        <option value="true">是</option>
+        <option value="false">否</option>
+      </select>
+      <input type="number" id="js-phone" name="phone" class="col-md-6" placeholder="您的联系电话？" required>
+      <textarea class="col-md-12" name="content" id="js-content" placeholder="请填写您的留言内容！" required></textarea>
+      <button type="submit" id="js-push-btn" class="col-md-12">提交</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

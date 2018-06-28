@@ -11,7 +11,7 @@
       <li><a href="/">首页</a></li>
       <li><a href="/gift">礼金\礼券</a></li>
       <li><a href="/about">关于蟹太太</a></li>
-      <li><a href="/">联系蟹太太</a></li>
+      <li><a href="#contact">联系蟹太太</a></li>
     </ul>
   </nav>
   {# 轮播图 #}
@@ -181,7 +181,7 @@
 </section>
 
 {# 问卷 #}
-<section class=" question">
+<section class=" question"  id="contact">
   <div class="wrap">
     <div class="title">联系我们</div>
     <form id="js-form" class="row" onsubmit="return false">
@@ -208,6 +208,6 @@
 </section>
 {% endblock %}
 
-{% block script %}
+{# {% block script %}
 <script src="/public/js/question.js"></script>
-{% endblock %}
+{% endblock %} #}
