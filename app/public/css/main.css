@@ -15,6 +15,7 @@ a:link,
 a:hover {
   text-decoration-line: none;
   color: #fff;
+  outline: none;
 }
 
 /* 导航 */
@@ -68,21 +69,27 @@ header .carousel-inner .item .buy-btn {
   background: rgba(255, 255, 255, 0);
 }
 
-.buy-contact {
-  position: fixed;
-  left: 45%;
-  top: 86%;
-  z-index: 2000;
-  display: inline-block;
-  height: 32px;
-  width: 200px;
-  border: 1px solid #c48235;
-  line-height: 32px;
-  font-size: 22px;
-  color: #000;
-  background: #c48235;
-  font-weight: bold;
-  text-align: center;
+@media screen and (max-width: 1920px) {
+  .buy-contact {
+    position: fixed;
+    left: 45%;
+    top: 743px;
+    z-index: 2000;
+    display: inline-block;
+    height: 60px;
+    width: 200px;
+    /* border: 1px solid #c48235; */
+    line-height: 32px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .buy-contact {
+    top: 82%;
+  }
 }
 
 /* 视频部分 */

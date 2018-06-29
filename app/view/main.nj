@@ -1,7 +1,6 @@
 {% extends 'root.nj' %}
 
 {% block body %}
-<a class="buy-contact" href="#contact">订购咨询</a>
 {# 头部 #}
 <header >
   <div class="header-logo wrap">
@@ -29,15 +28,18 @@
       </div>
     </div>
   </div>
-  <video id="js-video" class="header-video"  
+  <video id="js-video" class="header-video"  autoplay
     src="/public/video/xtt.mp4" controls="controls">
   您的浏览器不支持 video 标签。
   </video>
   <span class="clickToSmall" id="js-video-small"></span>
-
+  <a class="buy-contact" href="#contact">
+    <img src="/public/images/dgzx.gif" alt="订购咨询按钮">
+  </a>
 
   {# 相关文字 #}
   <div class="description wrap">
+    
     <div class="line"></div>
     <div class="content">
       <p>
