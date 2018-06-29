@@ -9,27 +9,33 @@ body {
   width: 1150px;
   margin: 0 auto;
 }
+
 a,
 a:link,
-a:hover  {
+a:hover {
   text-decoration-line: none;
   color: #fff;
 }
 
 /* 导航 */
+
 header {
   height: 100%;
-  background: linear-gradient(-45deg,#000, #312210, #000);
+  background: linear-gradient(-45deg, #000, #312210, #000);
 }
+
 header .header-logo {
   height: 70px;
 }
+
 header .header-logo img {
   width: 555px;
 }
-nav ul{
+
+nav ul {
   text-align: center;
 }
+
 nav ul li {
   list-style-type: none;
   display: inline-block;
@@ -43,6 +49,7 @@ nav ul li:not(:last-child) {
 }
 
 /* 轮播图 */
+
 header .carousel-inner .item img {
   margin: 0 auto;
   width: 60%;
@@ -79,10 +86,13 @@ header .carousel-inner .item .buy-btn {
 }
 
 /* 视频部分 */
+
 header .header-video {
   position: fixed;
-  top: 15%;
-  left: 22%;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   z-index: 1000;
   width: 800px;
   height: 500px;
@@ -92,32 +102,40 @@ header .header-video-small {
   position: fixed;
   left: 0;
   top: 50%;
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   z-index: 2000;
 }
+
 header .clickToSmall {
   position: fixed;
-  top: 15%;
-  color: #fff;
+  top: 23%;
+  border: 4px solid #fff;
+  height: 12px;
+  width: 58px;
+  margin: 0 auto;
   z-index: 1000;
-  right: 19%;
-  background: #00000047;
+  right: -710px;
+  left: 0;
   cursor: pointer;
 }
+
 header .description {
   text-align: center;
   padding: 0 60px;
 }
-header  .description .line {
+
+header .description .line {
   width: 100%;
   height: 4px;
   background: #c48235;
   border-radius: 50%;
 }
+
 header .description .content {
   padding: 10px 0;
 }
+
 header .description .content p {
   color: #c48235;
   font-weight: bold;
@@ -125,6 +143,7 @@ header .description .content p {
 }
 
 /* 舌尖上的美味 */
+
 .food {
   text-align: center;
   padding: 20px;
@@ -140,7 +159,7 @@ header .description .content p {
   text-align: center;
 }
 
-.food-imgs img  {
+.food-imgs img {
   margin-bottom: 20px;
   box-shadow: 10px 10px 10px #d4d4d4;
   width: 352px;
@@ -173,6 +192,7 @@ header .description .content p {
 }
 
 /* 承诺 */
+
 .promise {
   margin-top: 20px;
   background: #281603;
@@ -187,28 +207,34 @@ header .description .content p {
   font-family: "微软雅黑";
   margin-bottom: 20px;
 }
+
 .promise-img {
   text-align: center;
 }
+
 .promise .promise-img h3 {
   color: #fff;
 }
 
 /* 质检合格 */
+
 .pass {
   padding: 20px;
 }
-.pass .title{
+
+.pass .title {
   text-align: center;
   font-size: 38px;
   color: #000;
   font-family: "微软雅黑";
   margin-bottom: 60px;
 }
+
 .pass .pass-imgs {
   margin: 20px 0;
   text-align: center;
 }
+
 .pass .pass-imgs .pass-img {
   display: inline-block;
 }
@@ -220,9 +246,11 @@ header .description .content p {
 }
 
 /* 高品质礼盒 */
+
 .gift {
   padding: 60px 0;
 }
+
 .gift .title {
   text-align: center;
   font-size: 38px;
@@ -258,6 +286,7 @@ header .description .content p {
 }
 
 /* 十年品质好蟹 */
+
 .good .title {
   text-align: center;
   font-size: 38px;
@@ -279,12 +308,14 @@ header .description .content p {
 }
 
 /* 问卷 */
+
 .question {
   background: #4a4e53;
   padding: 50px;
   margin-top: 40px;
   z-index: 5000;
 }
+
 .question .title {
   text-align: center;
   font-size: 38px;

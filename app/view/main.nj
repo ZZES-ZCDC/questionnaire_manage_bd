@@ -30,11 +30,12 @@
     </div>
   </div>
   <video id="js-video" class="header-video"  
-      src="/public/video/xtt.mp4" controls="controls">
-    您的浏览器不支持 video 标签。
-    
+    src="/public/video/xtt.mp4" controls="controls">
+  您的浏览器不支持 video 标签。
   </video>
-  <span class="clickToSmall" id="js-video-small">点击缩小</span>
+  <span class="clickToSmall" id="js-video-small"></span>
+
+
   {# 相关文字 #}
   <div class="description wrap">
     <div class="line"></div>
