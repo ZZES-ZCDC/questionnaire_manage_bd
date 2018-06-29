@@ -109,8 +109,8 @@ header .header-video-small {
   position: fixed;
   left: 0;
   top: 50%;
-  width: 400px;
-  height: 300px;
+  width: 250px;
+  height: 200px;
   z-index: 2000;
 }
 

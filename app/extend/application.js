@@ -6,21 +6,40 @@ module.exports = {
    * @param {Int} id 
    * @param {String} username 
    */
-  generateJWT( id, username ) {
-    const { config } = this
-    const token = this.jwt.sign( { id, username }, config.jwt.secret )
+  generateJWT(id, username) {
+    const {
+      config
+    } = this
+    const token = this.jwt.sign({
+      id,
+      username
+    }, config.jwt.secret)
     return token
   },
-  
+
   /**
    * 验证jwt
    * @param {Object} ctx 
    */
   verifyToken(ctx) {
-    const { config } = this
+    const {
+      config
+    } = this
     const token = config.jwt.getToken(ctx)
-    if(!token) return null
-    return this.jwt.verify( token, config.jwt.secret )
+    if (!token) return null
+    return this.jwt.verify(token, config.jwt.secret)
+  },
+
+  /**
+   * 验证jwt2
+   * @param {String} token 
+   */
+  verifyTokenByToken(token) {
+    const {
+      config
+    } = this
+    if (!token) return null
+    return this.jwt.verify(token, config.jwt.secret)
   },
 
   /**
@@ -32,10 +51,12 @@ module.exports = {
    */
   getUserJson(user, ctx, check) {
     user = user.get()
-    const {config} = this
+    const {
+      config
+    } = this
     let token = config.jwt.getToken(ctx)
-    if(check === 1){
-      if(!token) {
+    if (check === 1) {
+      if (!token) {
         token = 'Bearer ' + this.generateJWT(user.id, user.username, user.username)
       }
       ctx.cookies.set('token', token)
@@ -43,14 +64,16 @@ module.exports = {
         token,
         roles: user.userRoles
       }
-    } else if(check === 0) {
+    } else if (check === 0) {
       return {
         username: user.username,
         email: user.email
       }
     } else {
-      return {error:'联系管理员吧'}
-    } 
+      return {
+        error: '联系管理员吧'
+      }
+    }
   }
 
 }

@@ -1,7 +1,11 @@
 'use strict'
 
 module.exports = app => {
-  const { INTEGER, STRING, BIGINT } = app.Sequelize
+  const {
+    INTEGER,
+    STRING,
+    BIGINT
+  } = app.Sequelize
 
   const Question = app.model.define('Question', {
     id: {
@@ -30,6 +34,14 @@ module.exports = app => {
       type: STRING(200),
       allowNull: false
     },
+    userip: {
+      type: STRING(200),
+      allowNull: false
+    },
+    userurl: {
+      type: STRING(200),
+      allowNull: false
+    }
   }, {
     timestamps: true,
     freezeTableName: true,

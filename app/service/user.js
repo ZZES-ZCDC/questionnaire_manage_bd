@@ -19,11 +19,29 @@ class UserService extends Service {
    */
   async findByUsername(username) {
     const user = await this.ctx.model.User.findOne({
-      where: {username}
+      where: {
+        username
+      }
     })
-    if(!user) {
+    if (!user) {
       this.ctx.throw(404, 'user not found')
     }
+    return user
+  }
+
+  /**
+   * 通过用户名修改密码
+   * @param {Object} obj
+   * @return {Object} user
+   */
+  async changePasswordByUsername(obj) {
+    const user = await this.ctx.model.User.update({
+      password: obj.password,
+    }, {
+      where: {
+        username: obj.username
+      }
+    })
     return user
   }
 }

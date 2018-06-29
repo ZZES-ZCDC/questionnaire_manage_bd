@@ -32,6 +32,14 @@ class QuestionController extends Controller {
         type: 'string',
         required: true
       },
+      userip: {
+        type: 'string',
+        required: true
+      },
+      userurl: {
+        type: 'string',
+        required: true
+      },
     }, question)
     if (question.wish === true) {
       question.wish = '是'
@@ -51,7 +59,7 @@ class QuestionController extends Controller {
   }
 
   /**
-   * 渲染获取所有问卷数据
+   * 前端layui接口请求渲染表格
    */
   async getAllData() {
     const {
@@ -74,6 +82,7 @@ class QuestionController extends Controller {
           'Authorization': token
         }
       })
+
       const count = await ctx.service.question.getAllDataNum()
       ctx.body = {
         code: 0,
@@ -97,7 +106,7 @@ class QuestionController extends Controller {
     } = ctx.query
     let thePage = parseInt(page)
     if (thePage === 1) {
-      thePage = thePage
+      thePage = thePage - 1
     } else {
       thePage = thePage + parseInt(limit) - 1
     }
