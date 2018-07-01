@@ -117,6 +117,20 @@ class QuestionController extends Controller {
       res: result
     })
   }
+
+  /**
+   * 导出excel
+   */
+  async getExcelData() {
+    const {
+      ctx
+    } = this
+    const result = await ctx.service.question.getAllData()
+    ctx.helper.success({
+      ctx,
+      res: result
+    })
+  }
 }
 
 module.exports = QuestionController;

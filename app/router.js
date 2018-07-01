@@ -18,6 +18,7 @@ module.exports = app => {
   // 问卷相关
   router.post('/question', controller.question.addData) // 录入问卷信息
   router.get('/question/page', sessionCheck, controller.question.getAllDataByPage) // 获取所有问卷信息（分页）
+  router.get('/question/export', sessionCheck, controller.question.getExcelData) //导出excel
 
   // 页面渲染
   router.get('/', controller.home.mainPage)

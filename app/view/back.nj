@@ -21,16 +21,10 @@
       <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
       <ul class="layui-nav layui-nav-tree"  lay-filter="test">
         <li class="layui-nav-item layui-this">
-          <a href="javascript:;">问卷管理</a>
-          <dl class="layui-nav-child ">
-            <dd><a href="/back">问卷表格</a></dd>
-          </dl>
+          <a href="/back">问卷管理</a>
         </li>
-        <li class="layui-nav-item">
-          <a href="javascript:;">用户管理</a>
-          <dl class="layui-nav-child">
-            <dd><a href="/account">密码修改</a></dd>
-          </dl>
+        <li class="layui-nav-item ">
+          <a href="/account" >用户管理</a>
         </li>
       </ul>
     </div>
@@ -39,6 +33,7 @@
   <div class="layui-body">
     <!-- 内容主体区域 -->
     <div style="padding: 15px;">
+      <button class="layui-btn" id="js-export-btn">导出Excel数据</button>
       <table class="layui-hide" id="test"></table>
     </div>
   </div>
@@ -49,7 +44,32 @@
   </div>
 </div>
 <script src="/public/js/layui.js"></script>
+<script src="/public/js/jquery.min.js"></script>
+<script src="/public/js/jsonExportExcel.min.js"></script>
 <script>
+  $("#js-export-btn").click(function(){
+    $.ajax({
+      url: '/question/export',
+      method: 'GET',
+      headers:{
+        "content-type":"application/json"
+      },
+      success: function(data) {
+        var data = data.data
+        var option = {}
+        option.fileName = '问卷数据' //导出文件名
+        option.datas = [{
+            sheetData: data, //json数据
+            sheetName: 'sheet', 
+            sheetFilter: ['id', 'wish', 'before', 'content', 'method', 'phone', 'userip', 'userurl', 'created_at'], //json中的键名，可以选择导出的项目
+            sheetHeader: ['序号', '有意向参加免费品尝活动', '曾购买过公司大闸蟹', '建议', '购买方式', '联系方式', '用户IP', '访问URL', '提交日期'], //导出表的表头标题
+        }]
+        var toExcel = new ExportJsonExcel(option);
+        toExcel.saveExcel();
+      }
+    })
+  })
+ 
 //JavaScript代码区域
 layui.use('element', function(){
   var element = layui.element;
@@ -73,6 +93,9 @@ layui.use('table', function(){
     ,page: true
   });
 });
+
+ 
+
 
 </script>
 </body>
