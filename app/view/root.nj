@@ -28,7 +28,8 @@
       } else {
         localStorage.setItem("keyword",'无')
       }
-      
+    } else {
+      localStorage.setItem("keyword",'无')
     }
   </script>
   {% block css %}
