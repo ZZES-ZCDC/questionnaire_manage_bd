@@ -61,8 +61,8 @@
         option.datas = [{
             sheetData: data, //json数据
             sheetName: 'sheet', 
-            sheetFilter: ['id', 'wish', 'before', 'content', 'method', 'phone', 'userip', 'userurl', 'created_at'], //json中的键名，可以选择导出的项目
-            sheetHeader: ['序号', '有意向参加免费品尝活动', '曾购买过公司大闸蟹', '建议', '购买方式', '联系方式', '用户IP', '访问URL', '提交日期'], //导出表的表头标题
+            sheetFilter: ['id', 'wish', 'before', 'content', 'method', 'phone', 'userip', 'userurl', 'keyword' 'created_at'], //json中的键名，可以选择导出的项目
+            sheetHeader: ['序号', '有意向参加免费品尝活动', '曾购买过公司大闸蟹', '建议', '购买方式', '联系方式', '用户IP', '填写问卷URL', '搜索关键字', '提交日期'], //导出表的表头标题
         }]
         var toExcel = new ExportJsonExcel(option);
         toExcel.saveExcel();

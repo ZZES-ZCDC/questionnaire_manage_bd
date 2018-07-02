@@ -34,6 +34,10 @@ module.exports = app => {
       type: STRING(200),
       allowNull: false
     },
+    keyword: {
+      type: STRING(200),
+      allowNull: false
+    },
     userip: {
       type: STRING(200),
       allowNull: false

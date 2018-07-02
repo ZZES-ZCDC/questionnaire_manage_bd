@@ -9,7 +9,28 @@
   <link rel="stylesheet" href="/public/css/font-awesome.min.css">
   <link rel="stylesheet" href="/public/css/normalize.css">
   <link rel="stylesheet" href="/public/css/main.css">
-
+  <script>
+    if(document.referrer) {
+      var url = decodeURI(document.referrer)
+      if(url.split("?")[1]){
+        var urlStr = url.split("?")[1]
+        var urlArr = urlStr.split("&")
+        var urlObj = {}
+        for(var i = 0, len = urlArr.length;i<len;i++) {
+          var data = urlArr[i].split("=")
+          urlObj[data[0]] = data[1]
+        }
+        if(url.Obj.utm_term){
+          localStorage.setItem("keyword",urlObj.utm_term)
+        } else {
+          localStorage.setItem("keyword",'无')
+        }
+      } else {
+        localStorage.setItem("keyword",'无')
+      }
+      
+    }
+  </script>
   {% block css %}
   {% endblock %}
 

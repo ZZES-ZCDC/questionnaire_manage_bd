@@ -19,10 +19,15 @@ class QuestionService extends Service {
    * @return 查询结果
    */
   async getAllDataByPage(offset = 0, limit = 10) {
-    const { ctx } = this
+    const {
+      ctx
+    } = this
     const result = await ctx.model.Question.findAll({
       offset: parseInt(offset),
-      limit: parseInt(limit)
+      limit: parseInt(limit),
+      order: [
+        ['id', 'DESC']
+      ]
     })
     return result
   }
@@ -32,7 +37,9 @@ class QuestionService extends Service {
    * @return 查询结果
    */
   async getAllData() {
-    const { ctx } = this
+    const {
+      ctx
+    } = this
     const result = await ctx.model.Question.findAll()
     return result
   }
@@ -41,7 +48,9 @@ class QuestionService extends Service {
    * 获取所有数据总数
    */
   async getAllDataNum() {
-    const { ctx } = this
+    const {
+      ctx
+    } = this
     const result = await ctx.model.Question.count()
     return result
   }

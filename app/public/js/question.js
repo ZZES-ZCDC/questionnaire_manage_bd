@@ -9,7 +9,8 @@ $(function () {
         temp++;
       }
     })
-    if (temp > 0 && obj.phonematch(/^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/) === null) {
+    console.log(obj.phone.match(/^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/) === null)
+    if (temp > 0 || obj.phone.match(/^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/) === null) {
       alert('参数不可为空或参数错误')
     } else {
       $.ajax({
@@ -25,7 +26,8 @@ $(function () {
           phone: parseInt(obj.phone),
           content: obj.content,
           userip: `${returnCitySN['cip']} ${returnCitySN['cname']}`,
-          userurl: location.href
+          userurl: location.href,
+          keyword: localStorage.getItem('keyword')
         }),
         success: function (data) {
           if (data.code === 200) {
