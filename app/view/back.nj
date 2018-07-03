@@ -88,6 +88,7 @@ layui.use('table', function(){
       ,{field:'userip', title: '用户IP', width:200, sort: true}
       ,{field:'userurl', title: '访问URL', width:200, sort: true}
       ,{field:'content', minWidth:150, title: '意见', sort: true}
+      ,{field:'keyword', minWidth:150, title: '关键字', sort: true}
       ,{field:'created_at', title: '提交时间', width:150, sort: true}
     ]]
     ,page: true
