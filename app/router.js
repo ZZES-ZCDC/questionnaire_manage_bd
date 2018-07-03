@@ -24,6 +24,7 @@ module.exports = app => {
   router.get('/', controller.home.mainPage)
   router.get('/gift', controller.home.giftPage)
   router.get('/about', controller.home.aboutPage)
+  router.get('/contact', controller.home.contactPage)
   router.get('/admin', controller.user.loginPage)
   router.get('/back', sessionCheck, controller.home.manage)
   router.get('/account', sessionCheck, controller.home.account)

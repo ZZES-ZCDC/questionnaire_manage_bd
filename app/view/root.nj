@@ -41,6 +41,7 @@
   <! [endif] -->
 </head>
 <body>
+  <img class="right-qrcode" src="/public/images/right_qrcode.jpg" alt="联系方式二维码">
   {% block body %}
   {% endblock %}
   <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>

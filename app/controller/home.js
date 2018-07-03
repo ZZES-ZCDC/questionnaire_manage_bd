@@ -34,6 +34,16 @@ class HomeController extends Controller {
   }
 
   /**
+   * 联系我们页面
+   */
+  async contactPage() {
+    const {
+      ctx
+    } = this
+    await ctx.render('contact')
+  }
+
+  /**
    * 管理界面layui
    */
   async manage() {

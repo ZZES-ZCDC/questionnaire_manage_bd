@@ -1,16 +1,14 @@
 {% extends 'root.nj' %}
-
-{% block css%}
-<link rel="stylesheet" href="/public/css/gift.css">
-{% endblock%}
+{% block css %}
+<link rel="stylesheet" href="/public/css/contact.css">
+{% endblock %}
 
 {% block body %}
- 
 <header >
   <div class="header-logo wrap">
     <img src="/public/images/header.png" alt="头部logo">
-  </div>
-  <div class="gift-header">
+  </div> 
+  <div class="about-header">
     <nav class="wrap">
       <ul>
         <li><a href="/">首页</a></li>
@@ -19,56 +17,54 @@
         <li><a href="/contact">联系蟹太太</a></li>
       </ul>
     </nav>
-    <img src="/public/images/gift_header.png" alt="礼品">
+    <img src="/public/images/gift_header.png" alt="关于">
   </div>
 </header>
 
-{# 礼品 #}
+{# 联系我们 #}
 <section class="wrap">
-  <div class="gift-title">
-    <img src="/public/images/gift_title.png" alt="礼物列表标题">
+  <div class="about-title">
+    <img src="/public/images/contact_us.png" alt="联系我们">
   </div>
-
-  <div class="gift-imgs row">
-    <div class="col-md-2">
-      <a id="gift-img1" href="#contact">
-        <img src="/public/images/c1.png" alt="">
-      </a>
+  <div class="row my-contact">
+    <div class="col-md-4 left-img">
+      <img src="/public/images/qrcode.png" alt="二维码">
     </div>
-    <div class="col-md-2">
-      <a id="gift-img2" href="#contact"><img src="/public/images/c2.png" alt=""></a>
-    </div>
-    <div class="col-md-2">
-      <a id="gift-img3" href="#contact"><img src="/public/images/c3.png" alt=""></a>
-    </div>
-    <div class="col-md-2">
-      <a id="gift-img4" href="#contact"><img src="/public/images/c4.png" alt=""></a>
-    </div>
-    <div class="col-md-2">
-      <a id="gift-img5" href="#contact"><img src="/public/images/c5.png" alt=""></a>
-    </div>
-  </div>
-  <div class="gift-imgs row">
-    <div class="col-md-2">
-      <a id="gift-img6" href="#contact"><img src="/public/images/c6.png" alt=""></a>
-    </div>
-    <div class="col-md-2">
-      <a id="gift-img7" href="#contact"><img src="/public/images/c7.png" alt=""></a>
-    </div>
-    <div class="col-md-2">
-      <a id="gift-img8" href="#contact"><img src="/public/images/c8.png" alt=""></a>
-    </div>
-    <div class="col-md-2">
-      <a id="gift-img9" href="#contact"><img src="/public/images/c9.png" alt=""></a>
-    </div>
-    <div class="col-md-2">
-      <a id="gift-img10" href="#contact"><img src="/public/images/c10.png" alt=""></a>
+    <div class="col-md-8 right-text">
+      <ul>
+        <li>苏州西风阁电子商务有限公司</li>
+        <li>电话：18616856222  13917554569</li>
+        <li>苏州市姑苏区苏站路1588号 世界贸易中心B座12楼</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="contact" id="contact">
+{# 关于快递 #}
+<section class="wrap" style=“margin-top: 45px;”>
+  <div class="about-title">
+    <img src="/public/images/ems.png" alt="关于快递">
+    <h3>大闸蟹为生鲜冷冻产品，偏远地区难以保证时效及产品保温
+保鲜，可能会产生变质，故不派送。</h3>
+  </div>
+</section>
+
+<section class="wrap" style=“margin-top: 45px;”>
+  <div class="about-title">
+    <img src="/public/images/ems1.png" alt="关于快递">
+    <h3>青海、西藏、香港、澳门、台湾、海外。</h3>
+  </div>
+</section>
+<section class="wrap" style=“margin-top: 45px;”>
+  <div class="about-title">
+    <img src="/public/images/ems2.png" alt="关于快递">
+    <h3>海南、云南、重庆、宁夏、内蒙、新疆、黑龙江、
+辽宁、吉林、甘肃、广西等地。。</h3>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
     <img src="/public/images/contact.png" alt="联系我们">
   </div>
   <div class="question">
