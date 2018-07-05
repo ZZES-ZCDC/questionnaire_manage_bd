@@ -20,7 +20,7 @@
           var data = urlArr[i].split("=")
           urlObj[data[0]] = data[1]
         }
-        if(url.Obj.utm_term){
+        if(urlObj.utm_term){
           localStorage.setItem("keyword",urlObj.utm_term)
         } else {
           localStorage.setItem("keyword",'无')
