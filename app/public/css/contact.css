@@ -1,3 +1,7 @@
+.about-header img {
+  width: 100%;
+}
+
 .my-contact .left-img {
   text-align: right;
 }
@@ -37,4 +41,13 @@
 header {
   height: 100%;
   background: #000;
+}
+
+h3.before-buy {
+  letter-spacing: 8px;
+  line-height: 0;
+}
+
+h3.text-left {
+  text-align: left;
 }

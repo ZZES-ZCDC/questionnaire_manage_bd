@@ -33,7 +33,7 @@
     <div class="col-md-8 right-text">
       <ul>
         <li>苏州西风阁电子商务有限公司</li>
-        <li>电话：18616856222  13917554569</li>
+        <li>电话：18918300777 </li>
         <li>苏州市姑苏区苏站路1588号 世界贸易中心B座12楼</li>
       </ul>
     </div>
@@ -58,8 +58,9 @@
 <section class="wrap" style=“margin-top: 45px;”>
   <div class="about-title">
     <img src="/public/images/ems2.png" alt="关于快递">
-    <h3>海南、云南、重庆、宁夏、内蒙、新疆、黑龙江、
-辽宁、吉林、甘肃、广西等地。。</h3>
+    <h3 class="before-buy">【拍前请咨询】</h3>
+    <h3 class="text-left">海南、云南、重庆、宁夏、内蒙、新疆、黑龙江、
+辽宁、吉林、甘肃、广西等地。</h3>
   </div>
 </section>
 
