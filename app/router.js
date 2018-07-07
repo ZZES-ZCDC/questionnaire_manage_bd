@@ -31,7 +31,7 @@ module.exports = app => {
   router.get('/question', controller.question.getAllData) // layui表格所需接口请求
 
   // 手机端渲染
-  router.get('/m/home', controller.mobile.home)
+  router.get('/m/', controller.mobile.home)
   router.get('/m/gift', controller.mobile.gift)
   router.get('/m/about', controller.mobile.about)
   router.get('/m/contact', controller.mobile.contact)
