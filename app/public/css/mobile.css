@@ -190,3 +190,7 @@ header.bar {
 .list-block .item-content {
   flex-direction: column;
 }
+
+.question .questions-button button {
+  width: 100%;
+}

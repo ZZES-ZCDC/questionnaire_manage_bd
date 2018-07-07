@@ -12,6 +12,29 @@
     <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
     <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
     <link rel="stylesheet" href="/public/css/mobile.css">
+    <script>
+      if(document.referrer) {
+        var url = decodeURI(document.referrer)
+        if(url.split("?")[1]){
+          var urlStr = url.split("?")[1]
+          var urlArr = urlStr.split("&")
+          var urlObj = {}
+          for(var i = 0, len = urlArr.length;i<len;i++) {
+            var data = urlArr[i].split("=")
+            urlObj[data[0]] = data[1]
+          }
+          if(urlObj.utm_term){
+            localStorage.setItem("keyword",urlObj.utm_term)
+          } else {
+            localStorage.setItem("keyword",'无')
+          }
+        } else {
+          localStorage.setItem("keyword",'无')
+        }
+      } else {
+        localStorage.setItem("keyword",'无')
+      }
+    </script>
   </head>
   <body>
     <div class="page-group">
@@ -26,6 +49,7 @@
     <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
     {% block script %}
     {% endblock %}
     <script>
@@ -68,7 +92,48 @@
           }
         ]
       });
-      
+      {# 提交问卷 #}
+      $("#js-push-btn").click(function () {
+        var arr = $('#js-form').serializeArray()
+        console.log(arr)
+        var temp = 0;
+        var obj = {}
+        arr.forEach(function (v, i) {
+          obj[v.name] = v.value
+          if (v.value === "") {
+            temp++;
+          }
+        })
+        if (temp > 0 || obj.phone.match(/^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/) === null) {
+          alert('参数不可为空或参数错误')
+        } else {
+          $.ajax({
+            url: '/question',
+            type: 'POST',
+            headers: {
+              "content-type": "application/json"
+            },
+            data: JSON.stringify({
+              method: obj.method,
+              wish: obj.wish === '是' ? true : false ,
+              before: obj.before === '是' ? true : false ,
+              phone: parseInt(obj.phone),
+              content: obj.content,
+              userip: `${returnCitySN['cip']} ${returnCitySN['cname']}`,
+              userurl: location.href,
+              keyword: localStorage.getItem('keyword')
+            }),
+            success: function (data) {
+              if (data.code === 200) {
+                alert('提交成功')
+              } else {
+                alert('提交失败')
+              }
+              return false
+            }
+          })
+        }
+      })
     </script>
   </body>
 </html>

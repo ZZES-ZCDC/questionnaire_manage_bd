@@ -166,57 +166,64 @@
     <div class="wrap">
       <div class="question-title">联系我们</div>
       <form id="js-form" class="row" onsubmit="return false">
-      <div class="list-block">
-        <ul>
-          <!-- Text inputs -->
-          <li>
-            <div class="item-content">
-              <div class="item-inner">
-                <div class="item-input">
-                  <input type="text" name="method" id='method' placeholder="您想要那种购买方式？"/>
+        <div class="list-block">
+          <ul>
+            <!-- Text inputs -->
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-input">
+                    <input type="text" name="method" id='method' placeholder="您想要那种购买方式？" required/>
+                  </div>
                 </div>
               </div>
-              <div class="item-inner">
-                <div class="item-input">
-                  <input type="text" name="wish" id='wish' placeholder="您是否有意向参加我司的免费品尝活动？"/>
+            </li>
+            <li>
+              <div class="item-content">    
+                <div class="item-inner">
+                  <div class="item-input">
+                    <input type="text" name="wish" id='wish' placeholder="您是否有意向参加我司的免费品尝活动？" required/>
+                  </div>
                 </div>
               </div>
-              <div class="item-inner">
-                <div class="item-input">
-                  <input type="text" name="before" id='before' placeholder="您是否曾购买过蟹太太大闸蟹？"/>
+            </li>
+            <li>
+              <div class="item-content">    
+                <div class="item-inner">
+                  <div class="item-input">
+                    <input type="text" name="before" id='before' placeholder="您是否曾购买过蟹太太大闸蟹？" required/>
+                  </div>
                 </div>
               </div>
-              <div class="item-inner">
-                <div class="item-input">
-                  <input type="number" name="phone" id='phone' placeholder="您的联系电话？"/>
+            </li>
+            <li>
+              <div class="item-content">    
+                <div class="item-inner">
+                  <div class="item-input">
+                    <input type="number" name="phone" id='phone' placeholder="您的联系电话？" required/>
+                  </div>
                 </div>
               </div>
-              <div class="item-inner">
-                <div class="item-input">
-                  <textarea  name="content" id="content" placeholder="请填写您的留言内容！" required></textarea>
+            </li>               
+            <li>
+              <div class="item-content">    
+                <div class="item-inner">
+                  <div class="item-input">
+                    <textarea  name="content" id="content" placeholder="请填写您的留言内容！" required></textarea>
+                  </div>
                 </div>
               </div>
+            </li>
+          <ul>
+        </div>
+        <div class="questions-button">
+          <div class="row">
+            <div class="col-100">
+              <button class="button button-big button-fill button-success" type="submit" id="js-push-btn">提交</button>
             </div>
-          </li>
-        <div>
-        {# <select id="js-method form-control" name="method" class="col-100" required>
-          <option value="">您想要那种购买方式？</option>
-          <option value="个人">个人</option>
-          <option value="团购">团购</option>
-        </select>
-        <select id="js-wish" name="wish" class="col-100" required>
-          <option value="">您是否有意向参加我司的免费品尝活动？</option>
-          <option value="true">是</option>
-          <option value="false">否</option>
-        </select>
-        <select id="js-before" name="before" class="col-100" required>
-          <option value="">您是否曾购买过蟹太太大闸蟹？</option>
-          <option value="true">是</option>
-          <option value="false">否</option>
-        </select>
-        <input type="number" id="js-phone" name="phone" class="col-100" placeholder="您的联系电话？" required>
-        <textarea class="col-100" name="content" id="js-content" placeholder="请填写您的留言内容！" required></textarea>
-        <button type="submit" id="js-push-btn" class="col-100">提交</button> #}
+          </div>
+        </div>
+
       </form>
     </div>
   </section>
