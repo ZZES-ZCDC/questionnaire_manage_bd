@@ -24,7 +24,6 @@
       }
       return flag;
     }
-    console.log(isMobile())
     if(isMobile()) {
       location.href = '/m'+location.pathname
     }
