@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>蟹太太</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="/public/css/mobile.css">
+  </head>
+  <body>
+    <div class="page-group">
+        <div class="page page-current">
+          <header class="bar bar-nav">
+            <img src="/public/images/header.png" class="header-img" alt="logo">
+          </header>
+          {% block body %}
+          {% endblock %}
+        </div>
+    </div>
+    <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    {% block script %}
+    {% endblock %}
+    <script>
+      $("#method").picker({
+        toolbarTemplate: '<header class="bar bar-nav">\
+        <button class="button button-link pull-left"></button>\
+        <button class="button button-link pull-right close-picker">确定</button>\
+        <h1 class="title">您想要那种购买方式？</h1>\
+        </header>',
+        cols: [
+          {
+            textAlign: 'center',
+            values: ['个人', '团购']
+          }
+        ]
+      });
+      $("#wish").picker({
+        toolbarTemplate: '<header class="bar bar-nav">\
+        <button class="button button-link pull-left"></button>\
+        <button class="button button-link pull-right close-picker">确定</button>\
+        <h1 class="title">您是否有意向参加我司的免费品尝活动？</h1>\
+        </header>',
+        cols: [
+          {
+            textAlign: 'center',
+            values: ['是', '否']
+          }
+        ]
+      });
+      $("#before").picker({
+        toolbarTemplate: '<header class="bar bar-nav">\
+        <button class="button button-link pull-left"></button>\
+        <button class="button button-link pull-right close-picker">确定</button>\
+        <h1 class="title">您是否曾购买过蟹太太大闸蟹？</h1>\
+        </header>',
+        cols: [
+          {
+            textAlign: 'center',
+            values: ['是', '否']
+          }
+        ]
+      });
+      
+    </script>
+  </body>
+</html>

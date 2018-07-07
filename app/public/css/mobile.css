@@ -1,0 +1,192 @@
+img {
+  width: 100%;
+}
+
+header.bar {
+  padding: 0;
+}
+
+.header-img {
+  width: 100%;
+  background: #000;
+}
+
+.swiper-slide img {
+  width: 100%;
+  display: block;
+  background: linear-gradient(-45deg, #000, #312210, #000);
+}
+
+.buy-btn {
+  position: absolute;
+  left: 17%;
+  top: 58%;
+  width: 78px;
+  height: 30px;
+  font-size: 0.7rem;
+  border: 1px solid #c48235;
+  color: #c48235;
+  text-align: center;
+  background: rgba(255, 255, 255, 0);
+}
+
+.swiper-container {
+  padding-bottom: 0;
+}
+
+.description {
+  text-align: center;
+  background: linear-gradient(-45deg, #000, #312210, #000);
+}
+
+.description .line {
+  width: 100%;
+  height: 4px;
+  background: #c48235;
+  border-radius: 50%;
+}
+
+.description .desc-content p {
+  color: #c48235;
+  font-weight: bold;
+  font-size: 0.5rem;
+}
+
+.foods img {
+  box-shadow: 10px 10px 10px #d4d4d4;
+}
+
+.promise {
+  background: #281603;
+}
+
+.promise img {
+  height: 91px;
+}
+
+.promise .promise-title {
+  text-align: center;
+  font-size: 38px;
+  color: #fff;
+  font-family: "微软雅黑";
+}
+
+.promise h3 {
+  font-size: 0.8rem;
+  font-weight: inherit;
+}
+
+.promise-img {
+  text-align: center;
+}
+
+.promise .promise-img h3 {
+  color: #fff;
+}
+
+/* 质检合格 */
+
+.pass {
+  padding: 20px;
+}
+
+.pass .pass-title {
+  text-align: center;
+  font-size: 38px;
+  color: #000;
+  font-family: "微软雅黑";
+}
+
+.pass .pass-imgs {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pass .pass-imgs .pass-img {
+  display: inline-block;
+}
+
+.pass .pass-imgs .pass-img p {
+  font-size: 16px;
+  font-family: "微软雅黑";
+  font-weight: bold;
+}
+
+/* 高品质礼盒 */
+
+.gift .gift-title {
+  text-align: center;
+  font-size: 38px;
+  color: #000;
+  font-family: "微软雅黑";
+  margin-bottom: 20px;
+}
+
+.gift .title-desc {
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+  font-family: "微软雅黑";
+  margin-bottom: 50px;
+}
+
+.gift .gift-img {
+  text-align: center;
+}
+
+.gift .gift-img img {
+  width: 100%;
+}
+
+.gift .gifts {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.gifts img {
+  height: 125px;
+}
+
+/* 十年品质好蟹 */
+
+.good .good-title {
+  text-align: center;
+  font-size: 38px;
+  color: #000;
+  font-family: "微软雅黑";
+  margin-bottom: 20px;
+}
+
+.good .title-desc {
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+  font-family: "微软雅黑";
+  margin-bottom: 25px;
+}
+
+.good .good-imgs img {
+  width: 100%;
+}
+
+/* 问卷 */
+
+.question {
+  background: #4a4e53;
+  padding: 15px 0;
+  margin-top: 40px;
+  z-index: 5000;
+}
+
+.question .question-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: normal;
+  color: #cccccc;
+  font-family: "微软雅黑";
+}
+
+.list-block .item-content {
+  flex-direction: column;
+}

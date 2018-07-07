@@ -29,4 +29,7 @@ module.exports = app => {
   router.get('/back', sessionCheck, controller.home.manage)
   router.get('/account', sessionCheck, controller.home.account)
   router.get('/question', controller.question.getAllData) // layui表格所需接口请求
+
+  // 手机端渲染
+  router.get('/m/home', controller.mobile.home)
 };
