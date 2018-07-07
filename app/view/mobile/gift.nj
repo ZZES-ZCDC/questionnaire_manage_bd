@@ -1,0 +1,70 @@
+{% extends 'mobile/mroot.nj'%}
+
+{% block body %}
+<nav class="bar bar-tab">
+  <a class="tab-item" href="/m/home">
+    <span class="icon icon-home"></span>
+    <span class="tab-label">首页</span>
+  </a>
+  <a class="tab-item active" href="/m/gift">
+    <span class="icon icon-gift"></span>
+    <span class="tab-label">礼金\礼券</span>
+  </a>
+  <a class="tab-item" href="/m/about">
+    <span class="icon icon-card"></span>
+    <span class="tab-label">关于蟹太太</span>
+  </a>
+  <a class="tab-item" href="/m/contact">
+    <span class="icon icon-phone"></span>
+    <span class="tab-label">联系蟹太太</span>
+  </a>
+</nav>
+<div class="content">
+  <!-- 这里是页面内容区 -->
+  <img class="other-header" src="/public/images/gift_header.png" alt="礼品">
+  {# 礼品 #}
+<section class="wrap">
+  <div class="gift-title">
+    <img src="/public/images/gift_title.png" alt="礼物列表标题">
+  </div>
+
+  <div class="gift-imgs row">
+    <div class="col-20">
+      <a class="external" id="gift-img1" href="#contact">
+        <img src="/public/images/c1.png" alt="">
+      </a>
+    </div>
+    <div class="col-20">
+      <a class="external" id="gift-img2" href="#contact"><img src="/public/images/c2.png" alt=""></a>
+    </div>
+    <div class="col-20">
+      <a class="external" id="gift-img3" href="#contact"><img src="/public/images/c3.png" alt=""></a>
+    </div>
+    <div class="col-20">
+      <a class="external" id="gift-img4" href="#contact"><img src="/public/images/c4.png" alt=""></a>
+    </div>
+    <div class="col-20">
+      <a class="external" id="gift-img5" href="#contact"><img src="/public/images/c5.png" alt=""></a>
+    </div>
+  </div>
+  <div class="gift-imgs row">
+    <div class="col-20">
+      <a class="external" id="gift-img6" href="#contact"><img src="/public/images/c6.png" alt=""></a>
+    </div>
+    <div class="col-20">
+      <a class="external" id="gift-img7" href="#contact"><img src="/public/images/c7.png" alt=""></a>
+    </div>
+    <div class="col-20">
+      <a class="external" id="gift-img8" href="#contact"><img src="/public/images/c8.png" alt=""></a>
+    </div>
+    <div class="col-20">
+      <a class="external" id="gift-img9" href="#contact"><img src="/public/images/c9.png" alt=""></a>
+    </div>
+    <div class="col-20">
+      <a class="external" id="gift-img10" href="#contact"><img src="/public/images/c10.png" alt=""></a>
+    </div>
+  </div>
+</section>
+{% include 'mobile/question.nj' %}
+</div>
+{% endblock %}

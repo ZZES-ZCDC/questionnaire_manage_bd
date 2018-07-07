@@ -1,0 +1,69 @@
+{% extends 'mobile/mroot.nj'%}
+
+{% block body %}
+<nav class="bar bar-tab">
+  <a class="tab-item" href="/m/home">
+    <span class="icon icon-home"></span>
+    <span class="tab-label">首页</span>
+  </a>
+  <a class="tab-item" href="/m/gift">
+    <span class="icon icon-gift"></span>
+    <span class="tab-label">礼金\礼券</span>
+  </a>
+  <a class="tab-item" href="/m/about">
+    <span class="icon icon-card"></span>
+    <span class="tab-label">关于蟹太太</span>
+  </a>
+  <a class="tab-item  active" href="/m/contact">
+    <span class="icon icon-phone"></span>
+    <span class="tab-label">联系蟹太太</span>
+  </a>
+</nav>
+<div class="content" style="background: #fff;">
+  <!-- 这里是页面内容区 -->
+  <img class="other-header" src="/public/images/gift_header.png" alt="礼品">
+  {# 联系我们 #}
+  <section class="wrap">
+    <div class="about-title">
+      <img src="/public/images/contact_us.png" alt="联系我们">
+    </div>
+    <div class="row my-contact">
+      <div class="col-100 left-img">
+        <img src="/public/images/qrcode.png" alt="二维码">
+      </div>
+      <div class="col-100 right-text">
+        <ul>
+          <li><h3>苏州西风阁电子商务有限公司</h3></li>
+          <li><h3>电话：18918300777 </h3></li>
+          <li><h3>苏州市姑苏区苏站路1588号 世界贸易中心B座12楼</h3></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {# 关于快递 #}
+  <section class="wrap" style=“margin-top: 45px;”>
+    <div class="about-title">
+      <img src="/public/images/ems.png" alt="关于快递">
+      <h3>大闸蟹为生鲜冷冻产品，偏远地区难以保证时效及产品保温
+  保鲜，可能会产生变质，故不派送。</h3>
+    </div>
+  </section>
+
+  <section class="wrap" style=“margin-top: 45px;”>
+    <div class="about-title">
+      <img src="/public/images/ems1.png" alt="关于快递">
+      <h3>青海、西藏、香港、澳门、台湾、海外。</h3>
+    </div>
+  </section>
+  <section class="wrap" style=“margin-top: 45px;”>
+    <div class="about-title">
+      <img src="/public/images/ems2.png" alt="关于快递">
+      <h3 class="before-buy">【拍前请咨询】</h3>
+      <h3 class="text-left">海南、云南、重庆、宁夏、内蒙、新疆、黑龙江、
+  辽宁、吉林、甘肃、广西等地。</h3>
+    </div>
+  </section>
+  {% include 'mobile/question.nj' %}  
+</div>
+{% endblock %}

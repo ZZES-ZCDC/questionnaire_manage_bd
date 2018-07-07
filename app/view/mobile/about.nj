@@ -1,0 +1,87 @@
+{% extends 'mobile/mroot.nj'%}
+
+{% block body %}
+<nav class="bar bar-tab">
+  <a class="tab-item" href="/m/home">
+    <span class="icon icon-home"></span>
+    <span class="tab-label">首页</span>
+  </a>
+  <a class="tab-item" href="/m/gift">
+    <span class="icon icon-gift"></span>
+    <span class="tab-label">礼金\礼券</span>
+  </a>
+  <a class="tab-item active" href="/m/about">
+    <span class="icon icon-card"></span>
+    <span class="tab-label">关于蟹太太</span>
+  </a>
+  <a class="tab-item" href="/m/contact">
+    <span class="icon icon-phone"></span>
+    <span class="tab-label">联系蟹太太</span>
+  </a>
+</nav>
+<div class="content" style="background:#fff;">
+  <!-- 这里是页面内容区 -->
+  <img class="other-header" src="/public/images/gift_header.png" alt="礼品">
+  {# 我们是谁 #}
+  <section class="wrap">
+    <div class="about-title">
+      <img src="/public/images/about_title.png" alt="我们是谁">
+    </div>
+    <div class="about-content">
+      <p>我们诞生在江南水乡和阳澄湖大闸蟹的故乡——苏州，是一家“技术驱动移动互联
+  网生活”的科技型企业，拥有经验丰富的运营团队。</p>
+      <p>2018年我们创建了大闸蟹明星品牌——蟹太太，只为树立行业标杆，加强行业品
+  牌性，打造行业公信力，重塑整个生鲜产业的大生态。</p>
+    </div>
+  </section>
+
+  <section class="about-main1">
+    <div class="wrap about-content row">
+      <div class="col-100">
+        <h3>一、与黄晓明签约合作</h3>
+        <p>2018年，蟹太太力邀黄晓明成为品牌形象代言人。
+  据悉，这是目前生鲜行业首个邀  请一线明星成为代
+  言人的品牌，将为生鲜行业注入了新鲜的资源与血
+  液。</p>
+      </div>
+      <div class="col-100">
+        <img src="/public/images/about1.png" alt="关于">
+      </div>
+    </div>
+  </section>
+
+  <section class="about-main2">
+    <div class="wrap about-content">
+      <div class="col-100">
+        <h3>二、与上海海洋大学战略合作</h3>
+        <p>2018年，蟹太太与上海海洋大学达成了战略合作，
+  将一同组成研发团队，对蟹苗和养殖水域等进行研
+  究。
+  上海海洋大学创建于1912年，前身为江苏省立水产
+  学校，2017年入选国家“双一流”建设高校。</p>
+      </div>
+      <div class="col-100">
+        <img src="/public/images/about2.png" alt="关于">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about-main1 about-main3">
+    <div class="wrap about-content row">
+      <div class="col-100">
+        <h3>三：让您满意的售后服务</h3>
+        <div class="list">
+          <p>（1）签约顺丰速递：闪电发货，物流保障</p>
+          <p>（2）鲜活生鲜直达：冷链运输，如坏包赔</p>
+        </div>
+      </div>
+      <div class="col-100">
+        <img src="/public/images/about3.png" alt="关于">
+      </div>
+    </div>
+  </section>
+
+  {% include 'mobile/question.nj' %}
+</div>
+{% endblock %}

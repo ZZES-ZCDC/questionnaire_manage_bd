@@ -6,15 +6,15 @@
     <span class="icon icon-home"></span>
     <span class="tab-label">首页</span>
   </a>
-  <a class="tab-item" href="/m/home">
+  <a class="tab-item" href="/m/gift">
     <span class="icon icon-gift"></span>
     <span class="tab-label">礼金\礼券</span>
   </a>
-  <a class="tab-item" href="/m/home">
+  <a class="tab-item" href="/m/about">
     <span class="icon icon-card"></span>
     <span class="tab-label">关于蟹太太</span>
   </a>
-  <a class="tab-item" href="/m/home">
+  <a class="tab-item" href="/m/contact">
     <span class="icon icon-phone"></span>
     <span class="tab-label">联系蟹太太</span>
   </a>
@@ -30,6 +30,14 @@
       </div>
     </div>
   </div>
+  <video id="js-video" class="header-video"  autoplay
+    src="/public/video/xtt.mp4" controls="controls">
+  您的浏览器不支持 video 标签。
+  </video>
+  <span class="clickToSmall" id="js-video-small"></span>
+  <a class="buy-contact external" href="#contact">
+    <img src="/public/images/dgzx.gif" alt="订购咨询按钮">
+  </a>
   <div class="description">
     <div class="line"></div>
     <div class="desc-content">
@@ -42,7 +50,7 @@
     </div>
     <div class="line"></div>
   </div>
-  {#  #}
+  {#  美食图片 #}
   <section class="content-padded foods">
     <div class="food">
       <img src="/public/images/foodtitle.png" alt="舌尖上的美味标题">
@@ -161,72 +169,7 @@
       </div>
     </div>
   </section>
-  {# 问卷 #}
-  <section class=" question"  id="contact">
-    <div class="wrap">
-      <div class="question-title">联系我们</div>
-      <form id="js-form" class="row" onsubmit="return false">
-        <div class="list-block">
-          <ul>
-            <!-- Text inputs -->
-            <li>
-              <div class="item-content">
-                <div class="item-inner">
-                  <div class="item-input">
-                    <input type="text" name="method" id='method' placeholder="您想要那种购买方式？" required/>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content">    
-                <div class="item-inner">
-                  <div class="item-input">
-                    <input type="text" name="wish" id='wish' placeholder="您是否有意向参加我司的免费品尝活动？" required/>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content">    
-                <div class="item-inner">
-                  <div class="item-input">
-                    <input type="text" name="before" id='before' placeholder="您是否曾购买过蟹太太大闸蟹？" required/>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content">    
-                <div class="item-inner">
-                  <div class="item-input">
-                    <input type="number" name="phone" id='phone' placeholder="您的联系电话？" required/>
-                  </div>
-                </div>
-              </div>
-            </li>               
-            <li>
-              <div class="item-content">    
-                <div class="item-inner">
-                  <div class="item-input">
-                    <textarea  name="content" id="content" placeholder="请填写您的留言内容！" required></textarea>
-                  </div>
-                </div>
-              </div>
-            </li>
-          <ul>
-        </div>
-        <div class="questions-button">
-          <div class="row">
-            <div class="col-100">
-              <button class="button button-big button-fill button-success" type="submit" id="js-push-btn">提交</button>
-            </div>
-          </div>
-        </div>
-
-      </form>
-    </div>
-  </section>
+  {% include 'mobile/question.nj' %}
 </div>
 
 {% endblock %}
@@ -236,5 +179,10 @@
   $(function() {
     $.init()
   });
+  $("#js-video-small").click(function () {
+    $("#js-video").removeClass("header-video")
+    $("#js-video").addClass("header-video-small")
+    $("#js-video-small").hide()
+  })
 </script>
 {% endblock %}
